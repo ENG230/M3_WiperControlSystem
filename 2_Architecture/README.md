@@ -1,1 +1,2 @@
-![STM32](https://user-images.githubusercontent.com/83355817/168338816-71e7f5e5-d1c8-4c3c-8daa-61e1da9ed7d2.jpg)
+![STM32](https://user-images.githubusercontent.com/83355817/168340815-92fdb75d-ad04-4c93-bf99-f576010ca669.jpg)
+
