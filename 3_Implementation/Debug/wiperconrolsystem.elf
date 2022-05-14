@@ -1,0 +1,358 @@
+ELF header
+==========
+
+Name           Offset         NumValue            Value          
+EI_MAG:        0x00000000     0x7F454C46          ELF
+EI_CLASS       0x00000004     0x01                32 BIT
+EI_DATA        0x00000005     0x01                DATA2LSB (Little-Endian)
+EI_VERSION     0x00000006     0x01                EV_CURRENT
+EI_OSABI       0x00000007     0x00                UNIX System V ABI
+EI_OSABIVER    0x00000008     0x00                
+E_TYPE         0x00000010     0x0002              ET_EXEC (Executable file)
+E_MACHINE      0x00000012     0x0028              EM_ARM (Advanced RISC Machines ARM)
+E_VERSION      0x00000014     0x00000001          EV_CURRENT
+E_ENTRY        0x00000018     0x08000641          
+E_PHOFF        0x0000001C     0x00000034          
+E_SHOFF        0x00000020     0x000FE2D4          
+E_FLAGS        0x00000024     0x05000400          
+E_EHSIZE       0x00000028     0x0034              
+E_PHENTSIZE    0x0000002A     0x0020              
+E_PHNUM        0x0000002C     0x0003              
+E_SHENTSIZE    0x0000002E     0x0028              
+E_SHNUM        0x00000030     0x001A              
+E_SHSTRNDX     0x00000032     0x0019              
+
+
+Program header tables
+=====================
+
+Type                Offset              VAddr               PAddr               FileSz              MemSz               Align               Flags               
+PT_LOAD             0x00010000          0x08000000          0x08000000          0x000021A0          0x000021A0          0x00010000          Execute|Write|Read  
+PT_LOAD             0x00020000          0x20000000          0x080021A0          0x00000004          0x00000004          0x00010000          Write|Read          
+PT_LOAD             0x00000004          0x20000004          0x20000004          0x00000000          0x00000924          0x00010000          Write|Read          
+
+
+Section header tables
+=====================
+
+Nr             Name                Type           Address             Offset              Size                Link           Info           AddrAlign           EntSize             Flags          
+0                                  SHT_NULL       0x00000000          0x00000000          0x00000000          0x00000000     0x00000000     0x00000000          0x00000000                         
+1              .isr_vector         SHT_PROGBITS   0x08000000          0x00010000          0x00000188          0x00000000     0x00000000     0x00000001          0x00000000          Alloc          
+2              .text               SHT_PROGBITS   0x08000188          0x00010188          0x00002010          0x00000000     0x00000000     0x00000004          0x00000000          Alloc|Exec     
+3              .rodata             SHT_PROGBITS   0x08002198          0x00020004          0x00000000          0x00000000     0x00000000     0x00000001          0x00000000          Write|Alloc    
+4              .ARM.extab          SHT_PROGBITS   0x08002198          0x00020004          0x00000000          0x00000000     0x00000000     0x00000001          0x00000000          Write          
+5              .ARM                SHT_PROGBITS   0x08002198          0x00020004          0x00000000          0x00000000     0x00000000     0x00000001          0x00000000          Write          
+6              .preinit_array      SHT_PREINIT_ARRAY0x08002198          0x00020004          0x00000000          0x00000000     0x00000000     0x00000001          0x00000004          Write|Alloc    
+7              .init_array         SHT_INIT_ARRAY 0x08002198          0x00012198          0x00000004          0x00000000     0x00000000     0x00000004          0x00000004          Write|Alloc    
+8              .fini_array         SHT_FINI_ARRAY 0x0800219C          0x0001219C          0x00000004          0x00000000     0x00000000     0x00000004          0x00000004          Write|Alloc    
+9              .data               SHT_PROGBITS   0x20000000          0x00020000          0x00000004          0x00000000     0x00000000     0x00000001          0x00000000          Write|Alloc    
+10             .ccmram             SHT_PROGBITS   0x10000000          0x00020004          0x00000000          0x00000000     0x00000000     0x00000001          0x00000000          Write          
+11             .bss                SHT_NOBITS     0x20000004          0x00020004          0x00000324          0x00000000     0x00000000     0x00000004          0x00000000          Write|Alloc    
+12             ._user_heap_stack   SHT_NOBITS     0x20000328          0x00020004          0x00000600          0x00000000     0x00000000     0x00000001          0x00000000          Write|Alloc    
+13             .ARM.attributes     Unknown        0x00000000          0x00020004          0x00000030          0x00000000     0x00000000     0x00000001          0x00000000                         
+14             .debug_info         SHT_PROGBITS   0x00000000          0x00020034          0x000079CC          0x00000000     0x00000000     0x00000001          0x00000000                         
+15             .debug_abbrev       SHT_PROGBITS   0x00000000          0x00027A00          0x00001364          0x00000000     0x00000000     0x00000001          0x00000000                         
+16             .debug_aranges      SHT_PROGBITS   0x00000000          0x00028D68          0x00000638          0x00000000     0x00000000     0x00000008          0x00000000                         
+17             .debug_ranges       SHT_PROGBITS   0x00000000          0x000293A0          0x000005A0          0x00000000     0x00000000     0x00000008          0x00000000                         
+18             .debug_macro        SHT_PROGBITS   0x00000000          0x00029940          0x000021F5          0x00000000     0x00000000     0x00000001          0x00000000                         
+19             .debug_line         SHT_PROGBITS   0x00000000          0x0002BB35          0x00007373          0x00000000     0x00000000     0x00000001          0x00000000                         
+20             .debug_str          SHT_PROGBITS   0x00000000          0x00032EA8          0x000C7C14          0x00000000     0x00000000     0x00000001          0x00000001          Merge|Strings  
+21             .comment            SHT_PROGBITS   0x00000000          0x000FAABC          0x00000050          0x00000000     0x00000000     0x00000001          0x00000001          Merge|Strings  
+22             .debug_frame        SHT_PROGBITS   0x00000000          0x000FAB0C          0x000018E0          0x00000000     0x00000000     0x00000004          0x00000000                         
+23             .symtab             SHT_SYMTAB     0x00000000          0x000FC3EC          0x00001180          0x00000018     0x00000086     0x00000004          0x00000010                         
+24             .strtab             SHT_STRTAB     0x00000000          0x000FD56C          0x00000C54          0x00000000     0x00000000     0x00000001          0x00000000                         
+25             .shstrtab           SHT_STRTAB     0x00000000          0x000FE1C0          0x00000112          0x00000000     0x00000000     0x00000001          0x00000000                         
+
+
+Symbol tables
+==============
+
+Symbol table of section table .symtab (Index 23) with 280 entries
+-----------------------
+Nr             Value               Size                Info (Binding|Type) Other          Shndx          Name           
+0              0x00000000          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0000                        
+1              0x08000000          0x00000000          LOCAL | SECTION     DEFAULT        0x0001                        
+2              0x08000188          0x00000000          LOCAL | SECTION     DEFAULT        0x0002                        
+3              0x08002198          0x00000000          LOCAL | SECTION     DEFAULT        0x0003                        
+4              0x08002198          0x00000000          LOCAL | SECTION     DEFAULT        0x0004                        
+5              0x08002198          0x00000000          LOCAL | SECTION     DEFAULT        0x0005                        
+6              0x08002198          0x00000000          LOCAL | SECTION     DEFAULT        0x0006                        
+7              0x08002198          0x00000000          LOCAL | SECTION     DEFAULT        0x0007                        
+8              0x0800219C          0x00000000          LOCAL | SECTION     DEFAULT        0x0008                        
+9              0x20000000          0x00000000          LOCAL | SECTION     DEFAULT        0x0009                        
+10             0x10000000          0x00000000          LOCAL | SECTION     DEFAULT        0x000A                        
+11             0x20000004          0x00000000          LOCAL | SECTION     DEFAULT        0x000B                        
+12             0x20000328          0x00000000          LOCAL | SECTION     DEFAULT        0x000C                        
+13             0x00000000          0x00000000          LOCAL | SECTION     DEFAULT        0x000D                        
+14             0x00000000          0x00000000          LOCAL | SECTION     DEFAULT        0x000E                        
+15             0x00000000          0x00000000          LOCAL | SECTION     DEFAULT        0x000F                        
+16             0x00000000          0x00000000          LOCAL | SECTION     DEFAULT        0x0010                        
+17             0x00000000          0x00000000          LOCAL | SECTION     DEFAULT        0x0011                        
+18             0x00000000          0x00000000          LOCAL | SECTION     DEFAULT        0x0012                        
+19             0x00000000          0x00000000          LOCAL | SECTION     DEFAULT        0x0013                        
+20             0x00000000          0x00000000          LOCAL | SECTION     DEFAULT        0x0014                        
+21             0x00000000          0x00000000          LOCAL | SECTION     DEFAULT        0x0015                        
+22             0x00000000          0x00000000          LOCAL | SECTION     DEFAULT        0x0016                        
+23             0x00000000          0x00000000          LOCAL | FILE        DEFAULT        0xFFF1         startup_stm32f407vgtx.o
+24             0x08000640          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+25             0x08000654          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         LoopCopyDataInit
+26             0x0800064E          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         CopyDataInit   
+27             0x08000666          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         LoopFillZerobss
+28             0x08000662          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         FillZerobss    
+29             0x08000690          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         Infinite_Loop  
+30             0x08000690          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+31             0x08000678          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $d             
+32             0x00000000          0x00000000          LOCAL | FILE        DEFAULT        0xFFF1         crtstuff.c     
+33             0x08002180          0x00000000          LOCAL | OBJECT      DEFAULT        0x0002         __EH_FRAME_BEGIN__
+34             0x08000188          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+35             0x08000189          0x00000000          LOCAL | FUNC        DEFAULT        0x0002         __do_global_dtors_aux
+36             0x080001A0          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $d             
+37             0x20000004          0x00000001          LOCAL | NOTYPE      DEFAULT        0x000B         completed.1    
+38             0x0800219C          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0008         $d             
+39             0x0800219C          0x00000000          LOCAL | OBJECT      DEFAULT        0x0008         __do_global_dtors_aux_fini_array_entry
+40             0x080001AC          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+41             0x080001AD          0x00000000          LOCAL | FUNC        DEFAULT        0x0002         frame_dummy    
+42             0x080001BC          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $d             
+43             0x20000008          0x00000018          LOCAL | NOTYPE      DEFAULT        0x000B         object.0       
+44             0x08002198          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0007         $d             
+45             0x08002198          0x00000000          LOCAL | OBJECT      DEFAULT        0x0007         __frame_dummy_init_array_entry
+46             0x20000004          0x00000000          LOCAL | NOTYPE      DEFAULT        0x000B         $d             
+47             0x00000000          0x00000000          LOCAL | FILE        DEFAULT        0xFFF1         main.c         
+48             0x080001C8          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+49             0x08000428          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $d             
+50             0x08000440          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+51             0x080005AC          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $d             
+52             0x00000000          0x00000000          LOCAL | FILE        DEFAULT        0xFFF1         stm32f4xx_it.c 
+53             0x080005B4          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+54             0x080005BA          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+55             0x080005C0          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+56             0x080005C6          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+57             0x080005CC          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+58             0x080005D2          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+59             0x080005E0          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+60             0x080005EE          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+61             0x080005FC          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+62             0x08000608          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+63             0x08000618          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $d             
+64             0x00000000          0x00000000          LOCAL | FILE        DEFAULT        0xFFF1         system_stm32f4xx.c
+65             0x0800061C          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+66             0x0800063C          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $d             
+67             0x00000000          0x00000000          LOCAL | FILE        DEFAULT        0xFFF1         stm32f4xx_hal.c
+68             0x20000020          0x00000000          LOCAL | NOTYPE      DEFAULT        0x000B         $d             
+69             0x08000694          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+70             0x080006B4          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $d             
+71             0x00000000          0x00000000          LOCAL | FILE        DEFAULT        0xFFF1         stm32f4xx_hal_hcd.c
+72             0x080006BC          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+73             0x0800182D          0x000000E6          LOCAL | FUNC        DEFAULT        0x0002         HCD_Port_IRQHandler
+74             0x08001689          0x000001A4          LOCAL | FUNC        DEFAULT        0x0002         HCD_RXQLVL_IRQHandler
+75             0x0800090D          0x000006AA          LOCAL | FUNC        DEFAULT        0x0002         HCD_HC_IN_IRQHandler
+76             0x08000FB7          0x000006D2          LOCAL | FUNC        DEFAULT        0x0002         HCD_HC_OUT_IRQHandler
+77             0x080008D2          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+78             0x0800090C          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+79             0x08000FB6          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+80             0x08001688          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+81             0x0800182C          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+82             0x00000000          0x00000000          LOCAL | FILE        DEFAULT        0xFFF1         stm32f4xx_ll_usb.c
+83             0x08001912          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+84             0x08001934          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+85             0x08001958          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+86             0x080019BC          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $d             
+87             0x080019C0          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+88             0x08001A1C          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $d             
+89             0x08001A20          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+90             0x08001AD0          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+91             0x08001AF6          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+92             0x08001B12          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+93             0x08001B86          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+94             0x08001BA8          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+95             0x08001DA0          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+96             0x00000000          0x00000000          LOCAL | FILE        DEFAULT        0xFFF1         usbh_core.c    
+97             0x08001EC4          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+98             0x08001EE9          0x00000030          LOCAL | FUNC        DEFAULT        0x0002         USBH_HandleSof 
+99             0x08001EE8          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+100            0x08001F18          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+101            0x08001F34          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+102            0x08001F50          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+103            0x08001F7E          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+104            0x00000000          0x00000000          LOCAL | FILE        DEFAULT        0xFFF1         usbh_pipes.c   
+105            0x08001FC6          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+106            0x00000000          0x00000000          LOCAL | FILE        DEFAULT        0xFFF1         usbh_conf.c    
+107            0x20000024          0x00000000          LOCAL | NOTYPE      DEFAULT        0x000B         $d             
+108            0x08002002          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+109            0x0800201E          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+110            0x0800203A          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+111            0x08002056          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+112            0x08002072          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+113            0x0800208E          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+114            0x080020AA          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+115            0x080020E0          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+116            0x080020FC          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $d             
+117            0x0800210C          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+118            0x00000000          0x00000000          LOCAL | FILE        DEFAULT        0xFFF1         init.c         
+119            0x08002138          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+120            0x08002170          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $d             
+121            0x00000000          0x00000000          LOCAL | FILE        DEFAULT        0xFFF1         crti.o         
+122            0x08002180          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+123            0x0800218C          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+124            0x00000000          0x00000000          LOCAL | FILE        DEFAULT        0xFFF1         crtn.o         
+125            0x08002184          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+126            0x08002190          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0002         $t             
+127            0x00000000          0x00000000          LOCAL | FILE        DEFAULT        0xFFF1                        
+128            0x0800219C          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0007         __init_array_end
+129            0x08002198          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0006         __preinit_array_end
+130            0x08002198          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0007         __init_array_start
+131            0x08002198          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0006         __preinit_array_start
+132            0x08000000          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0001         $d             
+133            0x20000000          0x00000000          LOCAL | NOTYPE      DEFAULT        0x0009         $d             
+134            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         RTC_Alarm_IRQHandler
+135            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         HASH_RNG_IRQHandler
+136            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         EXTI2_IRQHandler
+137            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         TIM8_CC_IRQHandler
+138            0x080005E1          0x0000000E          GLOBAL | FUNC       DEFAULT        0x0002         DebugMon_Handler
+139            0x08001F19          0x0000001C          GLOBAL | FUNC       DEFAULT        0x0002         USBH_LL_PortEnabled
+140            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         TIM1_CC_IRQHandler
+141            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         DMA2_Stream5_IRQHandler
+142            0x080005BB          0x00000006          GLOBAL | FUNC       DEFAULT        0x0002         HardFault_Handler
+143            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         DMA1_Stream5_IRQHandler
+144            0x00000400          0x00000000          GLOBAL | NOTYPE     DEFAULT        0xFFF1         _Min_Stack_Size
+145            0x080005FD          0x0000000C          GLOBAL | FUNC       DEFAULT        0x0002         SysTick_Handler
+146            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         PVD_IRQHandler 
+147            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         SDIO_IRQHandler
+148            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         TAMP_STAMP_IRQHandler
+149            0x0800203B          0x0000001C          GLOBAL | FUNC       DEFAULT        0x0002         HAL_HCD_Disconnect_Callback
+150            0x080021A0          0x00000000          GLOBAL | NOTYPE     DEFAULT        0xFFF1         _sidata        
+151            0x080005EF          0x0000000E          GLOBAL | FUNC       DEFAULT        0x0002         PendSV_Handler 
+152            0x080005B5          0x00000006          GLOBAL | FUNC       DEFAULT        0x0002         NMI_Handler    
+153            0x08002198          0x00000000          GLOBAL | NOTYPE     DEFAULT        0x0005         __exidx_end    
+154            0x08001F7F          0x00000048          GLOBAL | FUNC       DEFAULT        0x0002         USBH_LL_Disconnect
+155            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         CAN2_RX1_IRQHandler
+156            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         EXTI3_IRQHandler
+157            0x0800201F          0x0000001C          GLOBAL | FUNC       DEFAULT        0x0002         HAL_HCD_Connect_Callback
+158            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         TIM8_TRG_COM_TIM14_IRQHandler
+159            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         TIM1_UP_TIM10_IRQHandler
+160            0x08002198          0x00000000          GLOBAL | NOTYPE     DEFAULT        0x0002         _etext         
+161            0x20000004          0x00000000          GLOBAL | NOTYPE     DEFAULT        0x000B         _sbss          
+162            0x08001F51          0x0000002E          GLOBAL | FUNC       DEFAULT        0x0002         USBH_LL_Connect
+163            0x080020E1          0x00000058          GLOBAL | FUNC       DEFAULT        0x0002         USBH_Get_USB_Status
+164            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         TIM8_UP_TIM13_IRQHandler
+165            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         I2C3_ER_IRQHandler
+166            0x08001913          0x00000022          GLOBAL | FUNC       DEFAULT        0x0002         USB_EnableGlobalInt
+167            0x080020AB          0x00000036          GLOBAL | FUNC       DEFAULT        0x0002         USBH_LL_Stop   
+168            0x080019C1          0x00000060          GLOBAL | FUNC       DEFAULT        0x0002         USB_FlushRxFifo
+169            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         EXTI0_IRQHandler
+170            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         I2C2_EV_IRQHandler
+171            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         DMA1_Stream2_IRQHandler
+172            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         CAN1_RX0_IRQHandler
+173            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         FPU_IRQHandler 
+174            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         OTG_HS_WKUP_IRQHandler
+175            0x20000000          0x00000001          GLOBAL | OBJECT     DEFAULT        0x0009         uwTickFreq     
+176            0x080005CD          0x00000006          GLOBAL | FUNC       DEFAULT        0x0002         UsageFault_Handler
+177            0x08002073          0x0000001C          GLOBAL | FUNC       DEFAULT        0x0002         HAL_HCD_PortEnabled_Callback
+178            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         CAN2_SCE_IRQHandler
+179            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         DMA2_Stream2_IRQHandler
+180            0x20000004          0x00000000          GLOBAL | NOTYPE     DEFAULT        0x000B         __bss_start__  
+181            0x20000000          0x00000000          GLOBAL | NOTYPE     DEFAULT        0x0009         _sdata         
+182            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         SPI1_IRQHandler
+183            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         TIM6_DAC_IRQHandler
+184            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         TIM1_BRK_TIM9_IRQHandler
+185            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         DCMI_IRQHandler
+186            0x20000020          0x00000004          GLOBAL | OBJECT     DEFAULT        0x000B         uwTick         
+187            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         CAN2_RX0_IRQHandler
+188            0x08002198          0x00000000          GLOBAL | NOTYPE     DEFAULT        0x0005         __exidx_start  
+189            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         DMA2_Stream3_IRQHandler
+190            0x08002139          0x00000048          GLOBAL | FUNC       DEFAULT        0x0002         __libc_init_array
+191            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         USART6_IRQHandler
+192            0x08002181          0x00000000          GLOBAL | FUNC       DEFAULT        0x0002         _init          
+193            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         USART3_IRQHandler
+194            0x20000328          0x00000000          GLOBAL | NOTYPE     DEFAULT        0x000B         _ebss          
+195            0x08001A21          0x000000B0          GLOBAL | FUNC       DEFAULT        0x0002         USB_ReadPacket 
+196            0x08000641          0x00000038          WEAK | FUNC         DEFAULT        0x0002         Reset_Handler  
+197            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         CAN1_RX1_IRQHandler
+198            0x08001AD1          0x00000026          GLOBAL | FUNC       DEFAULT        0x0002         USB_ReadInterrupts
+199            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         UART5_IRQHandler
+200            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         DMA2_Stream0_IRQHandler
+201            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         TIM4_IRQHandler
+202            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         I2C1_EV_IRQHandler
+203            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         DMA1_Stream6_IRQHandler
+204            0x08001AF7          0x0000001C          GLOBAL | FUNC       DEFAULT        0x0002         USB_GetMode    
+205            0x08001DA1          0x00000124          GLOBAL | FUNC       DEFAULT        0x0002         USB_StopHost   
+206            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         DMA1_Stream1_IRQHandler
+207            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         UART4_IRQHandler
+208            0x20000328          0x00000000          GLOBAL | NOTYPE     DEFAULT        0x000B         __bss_end__    
+209            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         TIM3_IRQHandler
+210            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         RCC_IRQHandler 
+211            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         TIM8_BRK_TIM12_IRQHandler
+212            0x00000200          0x00000000          GLOBAL | NOTYPE     DEFAULT        0xFFF1         _Min_Heap_Size 
+213            0x08000690          0x00000002          GLOBAL | NOTYPE     DEFAULT        0x0002         Default_Handler
+214            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         EXTI15_10_IRQHandler
+215            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         ADC_IRQHandler 
+216            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         DMA1_Stream7_IRQHandler
+217            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         TIM7_IRQHandler
+218            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         CAN2_TX_IRQHandler
+219            0x0800208F          0x0000001C          GLOBAL | FUNC       DEFAULT        0x0002         HAL_HCD_PortDisabled_Callback
+220            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         TIM5_IRQHandler
+221            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         DMA2_Stream7_IRQHandler
+222            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         I2C3_EV_IRQHandler
+223            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         EXTI9_5_IRQHandler
+224            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         RTC_WKUP_IRQHandler
+225            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         ETH_WKUP_IRQHandler
+226            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         SPI2_IRQHandler
+227            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         OTG_HS_EP1_IN_IRQHandler
+228            0x080005C1          0x00000006          GLOBAL | FUNC       DEFAULT        0x0002         MemManage_Handler
+229            0x080001C9          0x000003EC          GLOBAL | FUNC       DEFAULT        0x0002         main           
+230            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         DMA1_Stream0_IRQHandler
+231            0x080021A4          0x00000000          GLOBAL | NOTYPE     DEFAULT        0xFFF1         _siccmram      
+232            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         CAN1_TX_IRQHandler
+233            0x080005D3          0x0000000E          GLOBAL | FUNC       DEFAULT        0x0002         SVC_Handler    
+234            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         EXTI4_IRQHandler
+235            0x0800061D          0x00000024          GLOBAL | FUNC       DEFAULT        0x0002         SystemInit     
+236            0x080006BD          0x00000216          GLOBAL | FUNC       DEFAULT        0x0002         HAL_HCD_IRQHandler
+237            0x08001935          0x00000022          GLOBAL | FUNC       DEFAULT        0x0002         USB_DisableGlobalInt
+238            0x0800218D          0x00000000          GLOBAL | FUNC       DEFAULT        0x0002         _fini          
+239            0x10000000          0x00000000          GLOBAL | NOTYPE     DEFAULT        0x000A         _eccmram       
+240            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         FSMC_IRQHandler
+241            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         ETH_IRQHandler 
+242            0x08002057          0x0000001C          GLOBAL | FUNC       DEFAULT        0x0002         HAL_HCD_HC_NotifyURBChange_Callback
+243            0x08000695          0x00000028          WEAK | FUNC         DEFAULT        0x0002         HAL_IncTick    
+244            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         OTG_HS_EP1_OUT_IRQHandler
+245            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         WWDG_IRQHandler
+246            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         TIM2_IRQHandler
+247            0x08001EC5          0x00000024          GLOBAL | FUNC       DEFAULT        0x0002         USBH_LL_IncTimer
+248            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         OTG_FS_WKUP_IRQHandler
+249            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         TIM1_TRG_COM_TIM11_IRQHandler
+250            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         OTG_HS_IRQHandler
+251            0x20020000          0x00000000          GLOBAL | NOTYPE     DEFAULT        0x0001         _estack        
+252            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         EXTI1_IRQHandler
+253            0x08001B87          0x00000022          GLOBAL | FUNC       DEFAULT        0x0002         USB_HC_ReadInterrupt
+254            0x20000024          0x00000304          GLOBAL | OBJECT     DEFAULT        0x000B         hhcd_USB_OTG_FS
+255            0x20000004          0x00000000          GLOBAL | NOTYPE     DEFAULT        0x0009         _edata         
+256            0x20000328          0x00000000          GLOBAL | NOTYPE     DEFAULT        0x000C         _end           
+257            0x10000000          0x00000000          GLOBAL | NOTYPE     DEFAULT        0x000A         _sccmram       
+258            0x08001BA9          0x000001F8          GLOBAL | FUNC       DEFAULT        0x0002         USB_HC_Halt    
+259            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         USART2_IRQHandler
+260            0x08000000          0x00000000          GLOBAL | OBJECT     DEFAULT        0x0001         g_pfnVectors   
+261            0x08002003          0x0000001C          GLOBAL | FUNC       DEFAULT        0x0002         HAL_HCD_SOF_Callback
+262            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         I2C2_ER_IRQHandler
+263            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         DMA2_Stream1_IRQHandler
+264            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         CAN1_SCE_IRQHandler
+265            0x08001FC7          0x0000003C          GLOBAL | FUNC       DEFAULT        0x0002         USBH_FreePipe  
+266            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         FLASH_IRQHandler
+267            0x08001F35          0x0000001C          GLOBAL | FUNC       DEFAULT        0x0002         USBH_LL_PortDisabled
+268            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         DMA2_Stream4_IRQHandler
+269            0x080005C7          0x00000006          GLOBAL | FUNC       DEFAULT        0x0002         BusFault_Handler
+270            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         USART1_IRQHandler
+271            0x08000609          0x00000014          GLOBAL | FUNC       DEFAULT        0x0002         OTG_FS_IRQHandler
+272            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         SPI3_IRQHandler
+273            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         DMA1_Stream4_IRQHandler
+274            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         I2C1_ER_IRQHandler
+275            0x08001B13          0x00000074          GLOBAL | FUNC       DEFAULT        0x0002         USB_InitFSLSPClkSel
+276            0x08001959          0x00000068          GLOBAL | FUNC       DEFAULT        0x0002         USB_FlushTxFifo
+277            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         DMA2_Stream6_IRQHandler
+278            0x080008D3          0x0000003A          GLOBAL | FUNC       DEFAULT        0x0002         HAL_HCD_Stop   
+279            0x08000691          0x00000002          WEAK | FUNC         DEFAULT        0x0002         DMA1_Stream3_IRQHandler
+
+
+Note tables
+==============
+
+- Note table does not exist -
