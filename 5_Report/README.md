@@ -1,10 +1,13 @@
 ## Introduction:
 
 The main purpose of the wiper Control system is to clean the windscreen sufficiently to provide suitable visibility at all times.
+Rainwater, dust and exhaust gas chemicals from vehicles that stick to the surface of an automobile windshield are probably not an issue as long as the driver has an unobstructed view of the road. However, if the sticking substances are left unchecked, they will become a threat for travel safety.
 
-The front windshield wiper system is one of the safety systems in a vehicle, which is categorized as a passive safety system because it only works when needed. The front windshield wipersfunction to ensure that the driver’s view remainsunobstructed when rain and or other natural disturbances occur.
-Today’s car wipers are manual systems that work on the principle of manual switching. So here we propose an automatic wiper system that automatically switches ON on
-detecting rain and stops when the rain stops. Our project brings forward this system to automate the wiper system not need manual intervention
+A windshield wiper control system comprises a wiper drive and two wiper arms. The drive moves the two wiper arms at a certain angle across the windshield, providing a clear view for the driver and passenger. A specially-shaped rubber wiping lip ensures an optimal wiping result
+
+Wipers are vital for driver visibility. The vehicle is considered unsafe if the wipers don't work. The front wiper motor and the wiper transmission mechanism (linkage) are installed below the windshield, under the cowl panel cover.
+
+Here we implemented Wiper Control System using STM32F4Discovery Board.
 
 
 ## Features:
