@@ -87,11 +87,11 @@ The STM32F407G-DISC1 is a Discovery Kit allows users to easily develop applicati
 |LR_03|	Button pressed third time|4 Hz speed - Blue, Green Orange alternative	|Implemented|
 |LR_04|	Button pressed fourth time|8 Hz speed - Blue, Green Orange alternative|Implemented|
 |LR_05|Button pressed again for two seconds|Turn Off all LEDs|Implemented|
-# OUTPUT IMAGES
+### OUTPUT IMAGES
 
 <br  />
 
-# Wiper ON STATE
+## Wiper ON STATE
 
 <bs  />
 
@@ -99,7 +99,7 @@ The STM32F407G-DISC1 is a Discovery Kit allows users to easily develop applicati
 
 <bs  />
 
-# WIPER SPEED IS LOW
+## WIPER SPEED IS LOW
 
 <bs  />
 
@@ -107,7 +107,7 @@ The STM32F407G-DISC1 is a Discovery Kit allows users to easily develop applicati
 
 <bs  />
 
-# WIPER SPEED IS MODERATE
+## WIPER SPEED IS MODERATE
 
 <bs  />
 
