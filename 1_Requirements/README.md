@@ -29,6 +29,8 @@ The windshield wipers eliminate downpour and snow from the windshield, while the
 
 # Who
 Mark Anderson invented on 1902.
+# How
+You can adjust the speed of the car wiper system  by altering the frequency according to the rainfall.
 # SWOT Analysis:
 
 # Strenghts
@@ -40,13 +42,37 @@ Mark Anderson invented on 1902.
  ➨Proides clear visibility for drivers.
  # Weakness
  ➨No Focus on Private Sector
- ➨ Week Focus on Process Innovations
+ 
+ ➨ Week Focus on Process Innovations.
  # Opportunities
  ➨Technological Development
- ➨Demand for Saver Equipments
+ 
+ ➨Demand for Saver Equipments.
  # Threats
  ➨Highly regulated Industry
- ➨Low Bargaining Power Buyers
+ 
+ ➨Low Bargaining Power Buyers.
+
+## REQUIREMENTS
+
+## High Level Requirements
+
+|  ID  |   Description   |  Status  |
+|------|-----------------|----------|
+| HR_01| ACC Mode Operation| Implemented|
+| HR_02|Wiper ON| Implemented|
+| HR_03|Wiper Speed Change|Implemented|
+|HR_04|Wiper OFF|Implemented|
+
+## Low Level Reuirements
+
+| ID	| Description	| Operation	|Status |
+|-----|-------------|-----------|-------|
+|LR_01|	Button pressed once for 2 secs|	Red LED ON	|Implemented|
+|LR_02|	Button pressed second time|	1 Hz speed - Blue, Green Orange alternative|Implemented|
+|LR_03|	Button pressed third time|4 Hz speed - Blue, Green Orange alternative	|Implemented|
+|LR_04|	Button pressed fourth time|8 Hz speed - Blue, Green Orange alternative|Implemented|
+|LR_05|Button pressed again for two seconds|Turn Off all LEDs|Implemented|
 
 
 
