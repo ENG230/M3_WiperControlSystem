@@ -1,6 +1,6 @@
-# TEST CASES AND OUTPUTS
+# TEST CASES
 
-## HIGH-LEVEL TEST CASES AND  OUTPUTS
+## HIGH-LEVEL TEST CASES
 
 |Test ID|	Description|	Exp.i/p|	Exp.o/p|	Actual o/p	|STATUS|
 |-------|------------|---------|---------|--------------|------|
@@ -10,7 +10,7 @@
 |4  |If the BUTTTON is pressed	|program execution|	WIPER starts	|LED ON(ORANGE)|	PASS|
 |5	|If the BUTTTON is pressed	|program execution|Microcontroller/Engine stops	|LED TURNED OFF	|PASS|
 
-## LOW-LEVEL TEST CASES AND OUPUTS
+## LOW-LEVEL TEST CASES
 
 |Test ID	| Description	| Exp.i/p	| Exp.o/p	| Actual o/p	| STATUS|
 |---------|-------------|---------|---------|-------------|-------|
