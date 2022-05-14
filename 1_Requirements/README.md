@@ -29,6 +29,26 @@ The windshield wipers eliminate downpour and snow from the windshield, while the
 
 # Who
 Mark Anderson invented on 1902.
+# SWOT Analysis:
+
+# Strenghts
+
+ ➨ Passive safety system in vehicles because it only works when needed.
+ 
+ ➨ High sensitivity
+ 
+ ➨Proides clear visibility for drivers.
+ # Weakness
+ ➨No Focus on Private Sector
+ ➨ Week Focus on Process Innovations
+ # Opportunities
+ ➨Technological Development
+ ➨Demand for Saver Equipments
+ # Threats
+ ➨Highly regulated Industry
+ ➨Low Bargaining Power Buyers
+
+
 
 
 
