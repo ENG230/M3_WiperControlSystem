@@ -15,7 +15,7 @@ Here we implemented Wiper Control System using STM32F407VG Board.
 
 Rainwater, dust and exhaust gas chemicals from vehicles that stick to the surface of an automobile windshield are probably not an issue as long as the driver has an unobstructed view of the road. However, if the sticking substances are left unchecked, they will become a threat for travel safety.
 
-## Features:
+## Features
 
 1.Ignition Key Position at ACC: The Red LED is ON, if the user button is pressed and held for 2 secs
 
@@ -26,7 +26,7 @@ Rainwater, dust and exhaust gas chemicals from vehicles that stick to the surfac
 4.Ignition Key Position at Lock: The Red LED is OFF, if the user button is pressed and held for 2 secs.
 
 5.Wipers returns back to their initial position even though they stuck in the middle position.
-# Software Requiremets:
+# Software Requiremets
 1.STM32 CUBE IDE
 
 2.Xpack packages
@@ -34,7 +34,7 @@ Rainwater, dust and exhaust gas chemicals from vehicles that stick to the surfac
   * Windows Build Tools
   * Open OCD
   * QEMU Software
-# Components Used:
+# Components Used
 STM32F4O7VG MICROCONTROLLER BOARD
 
 ![STM32](https://user-images.githubusercontent.com/83355817/168412121-78299942-4dc6-4686-8bae-70905cf308be.jpg)
