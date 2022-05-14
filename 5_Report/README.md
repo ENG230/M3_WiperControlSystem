@@ -1,4 +1,4 @@
-## Introduction:
+## Introduction 
 
 The main purpose of the wiper Control system is to clean the windscreen sufficiently to provide suitable visibility at all times.
 Rainwater, dust and exhaust gas chemicals from vehicles that stick to the surface of an automobile windshield are probably not an issue as long as the driver has an unobstructed view of the road. However, if the sticking substances are left unchecked, they will become a threat for travel safety.
@@ -10,7 +10,7 @@ Wipers are vital for driver visibility. The vehicle is considered unsafe if the 
 Here we implemented Wiper Control System using STM32F4Discovery Board.
 
 
-## Features:
+## Features
 
 1.Ignition Key Position at ACC: The Red LED is ON, if the user button is pressed and held for 2 secs
 
