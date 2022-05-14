@@ -47,7 +47,7 @@ STM32F407 series of microcontrollers are high-performance MCUs designed for medi
 
  Figure 1 : STM32F407 Discovery Board
 
-![STM32]<img width="403" alt="Figure_1_STM32F4DISCOVERY" src="https://user-images.githubusercontent.com/83355817/168411412-d6b30ca1-5213-4a68-b245-77b6d96e7f54.png">
+(<img width="403" alt="Figure_1_STM32F4DISCOVERY" src="https://user-images.githubusercontent.com/83355817/168411412-d6b30ca1-5213-4a68-b245-77b6d96e7f54.png">)
 
 
 The STM32F407G-DISC1 is a Discovery Kit allows users to easily develop applications with the STM32F407 high performance microcontrollers with ARM cortex-M4 32-bit core. It includes everything required either for beginners or for experienced users to get quickly started. Based on the STM32F407VGT6, it includes an ST-LINK/V2 or ST-LINK/V2-A embedded debug tool, two ST MEMS digital accelerometers, a digital microphone, one audio DAC with integrated class D speaker driver, LEDs and push buttons and an USB OTG micro-AB connector.
@@ -74,12 +74,15 @@ The STM32F407 Discovery board uses STM32F407VGT6 Microcontroller which has **ARM
 3. S-BUS (System Bus)
 
 * I-BUS
+
 This bus connects the Instruction bus of the Cortex®-M4 with FPU(Floating point unit) core to the BusMatrix. This bus is used by the core to fetch instructions. The target of this bus is a memory containing code (internal Flash memory/SRAM or external memories through the FSMC/FMC).
 
 * D-BUS
+
 This bus connects the databus of the Cortex®-M4 with FPU to the 64-Kbyte CCM data RAM to the BusMatrix. This bus is used by the core for literal load and debug access. The target of this bus is a memory containing code or data (internal Flash memory or external memories through the FSMC/FMC).
 
 * S-BUS
+
 This bus connects the system bus of the Cortex®-M4 with FPU core to a BusMatrix. This bus is used to access data located in a peripheral or in SRAM. Instructions may also be fetched on this bus (less efficient than ICode). The targets of this bus are the internal SRAM1, SRAM2 and SRAM3, the AHB1 peripherals including the APB peripherals, the AHB2 peripherals and the external memories through the FSMC/FMC.
 
 So instructions and data use I-bus and D-bus respectively, All the other peripheral uses System bus. The Cortex-M4 processor contains three external Advanced High-performance Bus (AHB)-Lite bus interface and one Advanced Peripheral Bus (APB) interface. The GPIOs are connected to AHB1 bus which has a maximum speed of 150Mhz and is divided into two buses as APB1 and APB2. APB1 runs at 42Mhz(max) and APB2 runs at 82Mhz(max). The different peripherals such as SPI, UART, TIMERs, ADCs, DACs, etc are connected to either APB1/APB2 buses. And the AHB2(168Mhz max) is connected to Camera and USB OTG interfaces, AHB3 is connected to External memory controller.
