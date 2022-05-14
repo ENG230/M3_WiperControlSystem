@@ -3,7 +3,9 @@
 # Codiga
 ![image](https://api.codiga.io/project/33449/score/svg)
 
-https://api.codiga.io/project/33449/status/svg
+![image](https://api.codiga.io/project/33449/status/svg)
+# Codacy
+![image](https://user-images.githubusercontent.com/89642370/168306215-a17f9caa-6ace-401e-8ba6-c242af81b90f.png)
 
 ![windshield-wper](https://user-images.githubusercontent.com/83355817/168411897-7e5508de-896e-4f03-9737-94605f70382f.jpg)
 
@@ -85,11 +87,11 @@ The STM32F407G-DISC1 is a Discovery Kit allows users to easily develop applicati
 |LR_03|	Button pressed third time|4 Hz speed - Blue, Green Orange alternative	|Implemented|
 |LR_04|	Button pressed fourth time|8 Hz speed - Blue, Green Orange alternative|Implemented|
 |LR_05|Button pressed again for two seconds|Turn Off all LEDs|Implemented|
-### OUTPUT IMAGES
+# OUTPUT IMAGES
 
 <br  />
 
-## Wiper ON STATE
+# Wiper ON STATE
 
 <bs  />
 
@@ -97,7 +99,7 @@ The STM32F407G-DISC1 is a Discovery Kit allows users to easily develop applicati
 
 <bs  />
 
-## WIPER SPEED IS LOW
+# WIPER SPEED IS LOW
 
 <bs  />
 
@@ -105,7 +107,7 @@ The STM32F407G-DISC1 is a Discovery Kit allows users to easily develop applicati
 
 <bs  />
 
-## WIPER SPEED IS MODERATE
+# WIPER SPEED IS MODERATE
 
 <bs  />
 
