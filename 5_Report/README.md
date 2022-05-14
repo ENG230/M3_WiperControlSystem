@@ -83,6 +83,84 @@ This bus connects the databus of the Cortex®-M4 with FPU to the 64-Kbyte CCM da
 This bus connects the system bus of the Cortex®-M4 with FPU core to a BusMatrix. This bus is used to access data located in a peripheral or in SRAM. Instructions may also be fetched on this bus (less efficient than ICode). The targets of this bus are the internal SRAM1, SRAM2 and SRAM3, the AHB1 peripherals including the APB peripherals, the AHB2 peripherals and the external memories through the FSMC/FMC.
 
 So instructions and data use I-bus and D-bus respectively, All the other peripheral uses System bus. The Cortex-M4 processor contains three external Advanced High-performance Bus (AHB)-Lite bus interface and one Advanced Peripheral Bus (APB) interface. The GPIOs are connected to AHB1 bus which has a maximum speed of 150Mhz and is divided into two buses as APB1 and APB2. APB1 runs at 42Mhz(max) and APB2 runs at 82Mhz(max). The different peripherals such as SPI, UART, TIMERs, ADCs, DACs, etc are connected to either APB1/APB2 buses. And the AHB2(168Mhz max) is connected to Camera and USB OTG interfaces, AHB3 is connected to External memory controller.
+## Tools Used for Implementation
+
+## Preprocessor
+The C preprocessor is a macro processor that is used automatically by the C compiler to transform your program before actual compilation. It is called a macro processor because it allows you to define macros, which are brief abbreviations for longer constructs.
+
+## The C preprocessor provides four separate facilities that you can use as you see fit
+
+Inclusion of header files. These are files of declarations that can be substituted into your program. Macro expansion. You can define macros, which are abbreviations for arbitrary fragments of C code, and then the C preprocessor will replace the macros with their definitions throughout the program. Conditional compilation. Using special preprocessing directives, you can include or exclude parts of the program according to various conditions. Line control. If you use a program to combine or rearrange source files into an intermediate file which is then compiled, you can use line control to inform the compiler of where each source line originally came from.
+
+## Pointers
+
+The Pointer in C, is a variable that stores address of another variable. A pointer can also be used to refer to another pointer function. A pointer can be incremented/decremented, i.e., to point to the next/ previous memory location. The purpose of pointer is to save memory space and achieve faster execution time. Like variables, pointers in C programming have to be declared before they can be used in your program. Pointers can be named anything you want as long as they obey C’s naming rules. A pointer declaration has the following form.
+
+syntax: data_type * pointer_variable_name;
+
+Types of Pointers in C: 1.Null Pointer 2.Void Pointer 3.Wild pointer 4.Dangling pointer
+
+## Funtion Pointer
+
+In the C function pointer is used to resolve the run time-binding. A function pointer is a pointer that stores the address of the function and invokes the function whenever required. In C, we can use function pointers to avoid code redundancy.
+
+Unlike normal pointers, a function pointer points to code, not data. Typically a function pointer stores the start of executable code.
+Unlike normal pointers, we do not allocate de-allocate memory using function pointers.
+
+## Struct
+
+A structure is a key word that create user defined data type in C. A structure creates a data type that can be used to group items of possibly different types into a single type.
+
+‘struct’ keyword is used to create a structure.
+
+A structure variable can either be declared with structure declaration or as a separate declaration like basic types.Structure members cannot be initialized with declaration.
+
+Structure members can be initialized using curly braces ‘{}’. For example, following is a valid initialization. Structure members are accessed using dot (.) operator.
+
+## Type def
+
+typedef, which you can use to give a type a new name. Following is an example to define a term BYTE for one-byte numbers.After this type definition, the identifier BYTE can be used as an abbreviation for the type unsigned char
+
+By convention, uppercase letters are used for these definitions to remind the user that the type name is really a symbolic abbreviation, but you can use lowercase.
+
+You can use typedef to give a name to your user defined data types as well. For example, you can use typedef with structure to define a new data type and then use that data type to define structure variables directly
+
+Syntax: typedef data_type new_name
+
+# 4W'S & 1H:
+# What
+ Wiper control system is used to remove rain and debris from a windscreen.
+
+# Why
+ It is used To clean the windscreen sufficiently to provide suitable visibility at all times.
+# When
+The windshield wipers eliminate downpour and snow from the windshield, while the headlights further develop perceivability around evening time.
+
+# Who
+Mark Anderson invented on 1902.
+# How
+You can adjust the speed of the car wiper system  by altering the frequency according to the rainfall.
+# SWOT Analysis:
+
+# Strenghts
+
+ ➨ Passive safety system in vehicles because it only works when needed.
+ 
+ ➨ High sensitivity
+ 
+ ➨Proides clear visibility for drivers.
+ # Weakness
+ ➨No Focus on Private Sector
+ 
+ ➨ Week Focus on Process Innovations.
+ # Opportunities
+ ➨Technological Development
+ 
+ ➨Demand for Saver Equipments.
+ # Threats
+ ➨Highly regulated Industry
+ 
+ ➨Low Bargaining Power Buyers.
 ## REQUIREMENTS
 
 ## High Level Requirements
@@ -103,6 +181,7 @@ So instructions and data use I-bus and D-bus respectively, All the other periphe
 |LR_03|	Button pressed third time|4 Hz speed - Blue, Green Orange alternative	|Implemented|
 |LR_04|	Button pressed fourth time|8 Hz speed - Blue, Green Orange alternative|Implemented|
 |LR_05|Button pressed again for two seconds|Turn Off all LEDs|Implemented|
+
 
 
                              
