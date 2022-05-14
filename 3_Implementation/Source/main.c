@@ -191,7 +191,6 @@ static void MX_TIM4_Init(void)
   /* USER CODE END TIM4_Init 2 */
 
 }
-
 /**
   * @brief GPIO Initialization Function
   * @param None
