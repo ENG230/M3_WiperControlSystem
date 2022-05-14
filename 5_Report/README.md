@@ -43,7 +43,9 @@ The xPack QEMU Arm is a standalone cross-platform binary distribution of QEMU, w
 ## COMPONENTS USED IN PROJECT
 
 ## STM32F407G-DISC1 Board
-![STM32F4](https://user-images.githubusercontent.com/83355817/168411330-da3d634c-1e25-4e63-a443-2ef314843b72.png)
+![STM32]<img width="403" alt="Figure_1_STM32F4DISCOVERY" src="https://user-images.githubusercontent.com/83355817/168411412-d6b30ca1-5213-4a68-b245-77b6d96e7f54.png">
+
+
 
 
 STM32F407 series of microcontrollers are high-performance MCUs designed for medical, industrial and consumer applications. It is based on ARM Cortex-M4 and offers up to 168MHz. The STM32F407VGT6 is the onboard chip which comes in a 100-pin LQFP package.
