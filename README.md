@@ -1,9 +1,9 @@
 # M3_WiperControlSystem
 # BADGES
 # Codiga
-https://api.codiga.io/project/33449/score/svg
+![IMG]https://api.codiga.io/project/33449/score/svg
 
-https://api.codiga.io/project/33449/status/svg
+![IMG]https://api.codiga.io/project/33449/status/svg
 
 ![windshield-wper](https://user-images.githubusercontent.com/83355817/168411897-7e5508de-896e-4f03-9737-94605f70382f.jpg)
 
