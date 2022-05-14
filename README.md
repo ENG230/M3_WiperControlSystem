@@ -16,6 +16,24 @@ Rainwater, dust and exhaust gas chemicals from vehicles that stick to the surfac
 4.Ignition Key Position at Lock: The Red LED is OFF, if the user button is pressed and held for 2 secs.
 
 5.Wipers returns back to their initial position even though they stuck in the middle position.
+# Software Requiremets:
+1.STM32 CUBE IDE
+
+2.Xpack packages
+
+  * Windows Build Tools
+  * Open OCD
+  * QEMU Software
+# Components Used:
+STM32F4O7VG MICROCONTROLLER BOARD
+
+![STM32](https://user-images.githubusercontent.com/83355817/168412121-78299942-4dc6-4686-8bae-70905cf308be.jpg)
+STM32F407 series of microcontrollers are high-performance MCUs designed for medical, industrial and consumer applications. It is based on ARM Cortex-M4 and offers up to 168MHz. The STM32F407VGT6 is the onboard chip which comes in a 100-pin LQFP package.
+
+The STM32F407G-DISC1 is a Discovery Kit allows users to easily develop applications with the STM32F407 high performance microcontrollers with ARM cortex-M4 32-bit core. It includes everything required either for beginners or for experienced users to get quickly started. Based on the STM32F407VGT6, it includes an ST-LINK/V2 or ST-LINK/V2-A embedded debug tool, two ST MEMS digital accelerometers, a digital microphone, one audio DAC with integrated class D speaker driver, LEDs and push buttons and an USB OTG micro-AB connector.
+
+
+
 
 
 ## ADVANTAGES
@@ -60,3 +78,44 @@ Rainwater, dust and exhaust gas chemicals from vehicles that stick to the surfac
 |LR_03|	Button pressed third time|4 Hz speed - Blue, Green Orange alternative	|Implemented|
 |LR_04|	Button pressed fourth time|8 Hz speed - Blue, Green Orange alternative|Implemented|
 |LR_05|Button pressed again for two seconds|Turn Off all LEDs|Implemented|
+### OUTPUT IMAGES
+
+<br  />
+
+## Wiper ON STATE
+
+<bs  />
+
+![ON STATE](https://user-images.githubusercontent.com/89642370/168281628-68efeed6-2dff-4c95-a680-632d29b3d3fc.png)
+
+<bs  />
+
+## WIPER SPEED IS LOW
+
+<bs  />
+
+![WIPER SPEED IS LOW](https://user-images.githubusercontent.com/89642370/168281759-0454762c-8e53-41f2-a6f3-64b2855c3bd1.png)
+
+<bs  />
+
+## WIPER SPEED IS MODERATE
+
+<bs  />
+
+![WIPER SPEED IS MODERATE](https://user-images.githubusercontent.com/89642370/168281892-d91d6f6b-ed52-46a3-80a6-0477733c16db.png)
+
+<bs  />
+
+## WIPER SPEED IS HIGH
+
+<bs  />
+
+![WIPER SPEED IS HIGH](https://user-images.githubusercontent.com/89642370/168282083-504fec62-5364-4645-acb5-c2a3e619a2e8.png)
+
+<bs  />
+
+## Wiper OFF STATE
+
+<bs  />
+
+![OFF STATE](https://user-images.githubusercontent.com/89642370/168282238-96d3f26d-fe85-459f-b519-685b63c1084f.png)
