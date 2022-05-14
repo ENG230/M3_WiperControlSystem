@@ -65,7 +65,8 @@ The STM32F407G-DISC1 is a Discovery Kit allows users to easily develop applicati
  ## Overview of STM32F407VGT6 Microcontroller
 **Figure 2. STM32F407VGT6 block diagram from 'STM32F4 Discovery User Manual' (Page 12).**
 
-<img src = "Images/Figure_6_STM32F407VGT6_block_diagram.png" width="750" height="950" hspace="30">
+![Figure_6_STM32F407VGT6_block_diagram](https://user-images.githubusercontent.com/83355817/168411665-fd3e4d17-1712-4739-8f19-8ef78d301c07.png)
+
 
 The STM32F407 Discovery board uses STM32F407VGT6 Microcontroller which has **ARM Cortex-M4F** Processor, which is capable of running upto **168Mhz**. This MCU has many peripherals such as GPIO ports, TIMERS, ADCs, DACs, Flash Memory, SRAM, SPI, UART ect. The processor and peripherals talk via **BUS-Interface**.  There are three busses available :-
 1. **I-BUS** (Instruction Bus)   
