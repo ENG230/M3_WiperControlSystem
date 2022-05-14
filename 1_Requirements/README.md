@@ -25,8 +25,12 @@ The STM32F407 Kit takes advantage of the high-performance STM32F407 microcontrol
 # Why
  It is used To clean the windscreen sufficiently to provide suitable visibility at all times.
 # When
+The windshield wipers eliminate downpour and snow from the windshield, while the headlights further develop perceivability around evening time.
 
 # Who
+Mark Anderson invented on 1902.
+
+
 
 
 
