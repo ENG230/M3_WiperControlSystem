@@ -7,9 +7,11 @@ The operational speed of a wiper is controlled by a wiper speed control system i
 The front windshield wiper system is one of the safety systems in a vehicle, which is categorized as a passive safety system because it only works when needed. The front windshield wipersfunction to ensure that the driver’s view remainsunobstructed when rain and or other natural disturbances occur.
 
 # Software Requiremets:
-1.STM32 CUBE IDE 
- 
-2.QEMU Software
+1.STM32 CUBE IDE
+2.Xpack packages
+  *Windows Build Tools
+  *Open OCD
+  *QEMU Software
 # Components:
 STM32F4O7VG MICROCONTROLLER BOARD
 ## Description
