@@ -1,21 +1,10 @@
 # M3_WiperControlSystem
-# BADGES
-# Codiga
-
-# Codacy 
-
-
-
-
-# M3_WiperControlSystem
-
-
 
 |c++check|codiga|CI|codacy|
 ---|---|---|---|
-|[![Cpp-CHeck](https://github.com/ENG230/M3_WiperControlSystem/actions/workflows/cpp.yml/badge.svg)](https://github.com/ENG230/M3_WiperControlSystem/actions/workflows/cpp.yml)|![image](https://api.codiga.io/project/33449/score/svg) ![image](https://api.codiga.io/project/33449/status/svg)|[![CI](https://github.com/ENG230/M3_WiperControlSystem/actions/workflows/main.yml/badge.svg)](https://github.com/ENG230/M3_WiperControlSystem/actions/workflows/main.yml)|
-![image](https://user-images.githubusercontent.com/89642370/168306215-a17f9caa-6ace-401e-8ba6-c242af81b90f.png)|
+|[![Cpp-CHeck](https://github.com/ENG230/M3_WiperControlSystem/actions/workflows/cpp.yml/badge.svg)](https://github.com/ENG230/M3_WiperControlSystem/actions/workflows/cpp.yml)|![image](https://api.codiga.io/project/33449/score/svg) ![image](https://api.codiga.io/project/33449/status/svg)|[![CI](https://github.com/ENG230/M3_WiperControlSystem/actions/workflows/main.yml/badge.svg)](https://github.com/ENG230/M3_WiperControlSystem/actions/workflows/main.yml)|![image](https://user-images.githubusercontent.com/89642370/168306215-a17f9caa-6ace-401e-8ba6-c242af81b90f.png)|
 
+## Folder Structure
 <html>
 <body>
 <!--StartFragment-->
