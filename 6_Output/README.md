@@ -1,3 +1,6 @@
+# OUTPUT VIDEO
+
+https://user-images.githubusercontent.com/62429376/167387308-8435a9da-6f4e-4c11-9b20-61ad71fd8822.mp4
 
 ### OUTPUT IMAGES WHEN THE WIPER IS IN ON, LOW, MODERATE, HIGH, OFF STATES
 
