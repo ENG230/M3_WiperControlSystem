@@ -1,8 +1,6 @@
 #include "main.h"
 
-
- TIM_HandleTypeDef htim4;
-
+TIM_HandleTypeDef htim4;
 
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
@@ -20,11 +18,9 @@ int main(void)
   
   while (1)
   {
-    /* USER CODE END WHILE */
-
-    /* USER CODE BEGIN 3 */
+    
   }
-  /* USER CODE END 3 */
+  
 }
 
 
