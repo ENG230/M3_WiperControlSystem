@@ -22,9 +22,23 @@ Folder | Description
 <!--EndFragment-->
 </body>
 </html>
+## Challenges Faced and How Did I Overcome
+
+| S No |	Challenge | Solution |
+| ------ | ----------- | --------- |
+| 1 | Implementation of PDLC and making UML diagrams |	Exploring them and linking with the architecture of my project |
+| 2 |	issues in running test cases | specifying correct return values for functions |
+| 3 |	Issues in workflows |	fixed them by updating the path to all files correctly |
+
+## References
+
+* You tube C programming learning 
+* Geeks for Geeks 
+* Reference from C text books
+
 ## Learning Resources
 
-- [Futureskills]
+- [Futureskills](https://futureskillsnasscom.edcast.com/journey/getting-started-with-arm-based-microcontrollers)
 - [markdownCheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 - [markdownBasics](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 - [git inspector](https://github.com/ejwa/gitinspector)
