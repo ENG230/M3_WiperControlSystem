@@ -22,7 +22,7 @@ Folder | Description
 <!--EndFragment-->
 </body>
 </html>
-## Challenges Faced and How Did I Overcome
+## Challenges faced and how did i overcome
 
 
 | S No |	Challenge | Solution |
